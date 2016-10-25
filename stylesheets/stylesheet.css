@@ -73,3 +73,12 @@ pre {
 .red {
   color: #dc322f;
 }
+
+/* Small Device Styles */
+
+@media screen and (max-width: 480px) {
+  body {
+    font-size: 2.5em;
+  }
+}
+>>>>>>> 973b167ae8d0b1d6e4279698b5787ee7b109bca9
