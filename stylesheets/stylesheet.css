@@ -42,38 +42,42 @@ body {
   box-sizing: border-box;
   color:#839496;
   background: #002b36;
-  font-size: 16px;
-  font-family: Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace;
+  font-size: 19.84px;
+  font-family: Hack, monospace;
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
+  text-align: center;
 }
 
 a {
   text-decoration: none;
-  color: #007edf;
   text-shadow: none;
-
-  transition: color 0.5s ease;
-  transition: text-shadow 0.5s ease;
-  -webkit-transition: color 0.5s ease;
-  -webkit-transition: text-shadow 0.5s ease;
-  -moz-transition: color 0.5s ease;
-  -moz-transition: text-shadow 0.5s ease;
-  -o-transition: color 0.5s ease;
-  -o-transition: text-shadow 0.5s ease;
-  -ms-transition: color 0.5s ease;
-  -ms-transition: text-shadow 0.5s ease;
 }
 
 a:hover, a:focus {text-decoration: underline;}
 
 pre {
+  display: inline-block;
+  text-align: left;
+  margin-top: 3.14em;
 }
 
-code {
+.cyan {
+  color: #2aa198;
+}
+
+.blue {
+  color: #268bd2;
+}
+
+.red {
+  color: #dc322f;
 }
 
 /* Small Device Styles */
 
 @media screen and (max-width: 480px) {
+  body {
+    font-size: 1em;
+  }
 }
