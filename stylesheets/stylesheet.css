@@ -76,9 +76,9 @@ pre {
 
 /* Small Device Styles */
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 700px) {
   body {
-    font-size: 2.5em;
+    font-size: 4vw;
   }
 }
 >>>>>>> 973b167ae8d0b1d6e4279698b5787ee7b109bca9
