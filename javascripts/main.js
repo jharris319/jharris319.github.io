@@ -1,1 +1,7 @@
-console.log('This would be the main JS file.');
+$( document ).ready(function() {
+  var typed = new Typed('#typed', {
+    stringsElement: '#typed-strings',
+    typeSpeed: 100,
+    backSpeed: 100
+  });
+});

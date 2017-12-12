@@ -8,30 +8,32 @@
     <meta name="viewport"              content="width=device-width">
 
     <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
-    <link rel='stylesheet' href='//cdn.jsdelivr.net/font-hack/2.020/css/hack.min.css'>
+    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="javascripts/typed.min.js"></script>
+    <script src="javascripts/main.js"></script>
 
-    <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-      ga('create', 'UA-86264866-1', 'auto');
-      ga('send', 'pageview');
-    </script>
+    <!-- <link rel='stylesheet' href='//cdn.jsdelivr.net/font-hack/2.020/css/hack.min.css'> -->
 
     <title>Jonathan Harris - Software Developer</title>
   </head>
 
   <body>
-    <pre>
-{
-  <span class="cyan">:name</span>   => "<span class="blue">Jonathan Harris</span>"  ,
-  <span class="cyan">:email</span>  => "<a href="mailto:jon@jharr.is" class="blue">jon@jharr.is</a>"     ,
-  <span class="cyan">:pgp</span>    => <a href="https://keybase.io/jharris/key.asc" class="red">F202 7D73 A64C B774</a>,
-  <span class="cyan">:github</span> => "<a href="https://github.com/jharris319" class="blue">jharris319</a>"       ,
-  <span class="cyan">:resume</span> => "<a href="/resume.pdf" class="blue">/resume.pdf</a>"
-}
-    </pre>
+    <div id='header'>
+      <div id='hero'>
+        <div class='overlay'></div>
+        <div id='text-container'>
+          <div id="typed-strings">
+              <p>Hey!</p>
+              <p>I'm Jonathan Harris</p>
+          </div>
+          <span id="typed"></span>
+        </div>
+        
+      </div>
+    </div>
+    <div id='content'>
+      
+    </div>
   </body>
 </html>

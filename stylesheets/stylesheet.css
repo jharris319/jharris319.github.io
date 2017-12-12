@@ -40,45 +40,73 @@ table {
 
 body {
   box-sizing: border-box;
-  color:#839496;
-  background: #002b36;
+  background: white;
   font-size: 19.84px;
-  font-family: Hack, monospace;
-  line-height: 1.5;
+  font-family: Nunito;
   -webkit-font-smoothing: antialiased;
   text-align: center;
 }
 
-a {
-  text-decoration: none;
-  text-shadow: none;
-}
-
-a:hover, a:focus {text-decoration: underline;}
-
-pre {
-  display: inline-block;
+#hero {
+  /*background: url(../images/hero.jpg) no-repeat center center; */
+  background-size: cover;
+  height: 600px;
+  position: relative;
   text-align: left;
-  margin-top: 3.14em;
 }
-
-.cyan {
-  color: #2aa198;
+#hero .overlay {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background: linear-gradient(25deg, #2aa198, #268bd2, #2aa198);
+  background-size: 400% 400%;
+  animation: gradient-movement 30s ease infinite;
 }
-
-.blue {
-  color: #268bd2;
+#hero #text-container {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  margin-left: 10%;
 }
-
-.red {
-  color: #dc322f;
+#hero #typed {
+  display: inline-block;
+  color: white;
+  font-size: 68px;
 }
+.typed-cursor {
+  color: white;
+  font-size: 68px;
+  opacity: 1;
+  animation: cursor-blink 1s infinite;
+  font-family: initial;
+}
+@keyframes cursor-blink {
+  0%,50% {
+      opacity: 1
+  }
 
-/* Small Device Styles */
-
-@media screen and (max-width: 700px) {
-  body {
-    font-size: 4vw;
+  100%,51% {
+      opacity: 0
   }
 }
->>>>>>> 973b167ae8d0b1d6e4279698b5787ee7b109bca9
+@keyframes gradient-movement { 
+  0%{background-position:0% 50%}
+  50%{background-position:100% 50%}
+  100%{background-position:0% 50%}
+}
+
+#content:before {
+  background: white;
+  top: -120px;
+  content: '';
+  display: block;
+  height: 120px;
+  position: relative;
+  transform: skewY(-5deg);
+  transform-origin: 100%;
+  box-shadow: inset 0 7px 9px -7px gray;
+  -webkit-backface-visibility: hidden;
+}
