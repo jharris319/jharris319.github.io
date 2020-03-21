@@ -77,6 +77,9 @@ header {
     button {
       transform: rotate(40deg);
       width: 22px;
+      &::-moz-focus-inner {
+        border: 0;
+      }
     }
   }
 }
