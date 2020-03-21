@@ -34,6 +34,9 @@ body {
       }
     }
     .contact {
+      label {
+        color: #fff;
+      }
       input,
       textarea {
         color: #fff;
@@ -109,6 +112,9 @@ header {
     input {
       margin-bottom: 30px;
     }
+    label {
+      color: #000;
+    }
     input,
     textarea {
       width: 100%;
@@ -166,6 +172,32 @@ header {
     p:last-of-type {
       font-size: 20px;
       opacity: 0.535;
+    }
+  }
+  .floating-label {
+    position: relative;
+    margin-bottom: 10px;
+    width: 100%;
+    label {
+      position: absolute;
+      top: 21px;
+      left: 0;
+      opacity: 0;
+      transition: all .3s ease;
+      padding-left: 30px;
+    }
+    input,
+    textarea {
+      transition: all .3s ease;
+    }
+    input:not(:placeholder-shown),
+    textarea:not(:placeholder-shown) {
+      padding: 31px 30px 9px 30px;
+    }
+    input:not(:placeholder-shown) + label,
+    textarea:not(:placeholder-shown) + label {
+      transform: translateY(-11px);
+      opacity: .7;
     }
   }
 }

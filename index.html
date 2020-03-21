@@ -70,9 +70,18 @@
       </section>
       <section class="contact">
         <form action="https://formspree.io/moqdalyk" method="POST">
-          <input type="text" placeholder="Name" name="name">
-          <input type="email" placeholder="Email" name="_replyto">
-          <textarea name="message" placeholder="What's on your mind?"></textarea>
+          <div class="floating-label">
+            <input id="name" type="text" name="name" placeholder="Name">
+            <label for="name">Name</label>
+          </div>
+          <div class="floating-label">
+            <input id="email" type="email" name="_replyto" placeholder="Email">
+            <label for="email">Email</label>
+          </div>
+          <div class="floating-label">
+            <textarea id="message" name="message" placeholder="What's on your mind?"></textarea>
+            <label for="message">What's on your mind?</label>
+          </div>
           <button type="submit">Send</button>
         </form>
       </section>
