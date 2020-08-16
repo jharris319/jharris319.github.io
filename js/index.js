@@ -1,6 +1,6 @@
-// Set the theme (either light or dark, controlled by a bool `light` flag).
+// Set the theme (either light or dark, controlled by a bool `light` flag)
 const themeButton = document.getElementById('theme-button');
-function setTheme({ light = true }) {
+function setTheme({ light = false }) {
   if (light) {
     document.body.setAttribute('data-theme', 'light');
     themeButton.innerText = '☽';
@@ -10,18 +10,17 @@ function setTheme({ light = true }) {
   }
 }
 
-// Toggle the theme when the user clicks the button.
+// Toggle the theme when the user clicks the theme button
 const THEME_STORAGE_KEY = 'jharr.is_theme';
 function toggleTheme() {
   const light = document.body.getAttribute('data-theme') !== 'light';
   setTheme({ light });
 
-  // Remember.
+  // Store user preference
   localStorage.setItem(THEME_STORAGE_KEY, document.body.getAttribute('data-theme'));
 }
 themeButton.onclick = toggleTheme;
 
-// Default to the user's theme, or their stored preference.
+// Default to the user's stored preference
 const stored = localStorage.getItem(THEME_STORAGE_KEY);
-const defaultIsLight = !(window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches);
-setTheme({ light: stored ? stored === 'light' : defaultIsLight });
+setTheme({ light: stored === 'light' });
